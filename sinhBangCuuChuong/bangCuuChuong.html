@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+    <style>
+table{
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+    font-size: larger;
+}
+    </style>
+</head>
+<body>
+
+</body>
+<script>
+    let bangCC = "<table  border='1px' style='margin: auto; border: red; color: white' cellspacing='0' cellpadding='3' bgcolor=black>";//tạo 1 thẻ table
+    for (i = 1; i < 9; i++) {
+        bangCC = bangCC + "<tr>";//tạo các thẻ hàng
+        for (j = 1; j < 10; j++) {
+            bangCC = bangCC + "<td>" + (i + 1) + "*" + j + "=" + (i + 1) * j + "</td>";//tạo các cột
+        }
+        bangCC = bangCC + "</tr>"//đóng thẻ hàng
+    }
+    bangCC = bangCC + "</table>"//đóng thẻ bảng
+    document.write(bangCC);//hiển thị kết quả
+</script>
+</html>
