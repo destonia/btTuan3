@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hãy đoán thử xem</title>
+</head>
+<body>
+<button onclick="action()" style="height: 500px;width: 500px; font-size: x-large">chơi</button>
+</body>
+<script>
+    function action() {
+        let n = prompt("nhập khoảng số bạn muốn đoán");
+        let a = prompt("nhập số bạn muốn đoán");
+        let b = Math.floor((Math.random()) * n);
+        let count = 1;
+        while (count<3) {
+            if (a > b) {
+                alert("a>b nhập lại");
+                a = prompt("nhập số bạn muốn đoán");
+                count++;
+            } else if (a < b) {
+                alert("a<b nhập lại")
+                a = prompt("nhập số bạn muốn đoán");
+                count++;
+            } else {
+                alert("bạn thắng");
+                count = 3;
+                break;
+            }
+            if (count === 3) {
+                alert("hết lượt đoán, bạn đã thua");
+            }
+        }
+    }
+
+
+</script>
+</html>

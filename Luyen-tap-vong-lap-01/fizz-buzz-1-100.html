@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra dãy 1-100 thay fizz và buzz</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = 0;
+    let result = '';
+    for (; a <= 100; a++) {
+        if (a % 3 === 0) {
+            if (a % 5 === 0) {
+                result += 'fizzbuzz'+'<br>';
+            } else {
+                result += 'fizz'+'<br>';
+            }
+        } else if (a % 5 === 0) {
+            result += 'buzz'+'<br>';
+        } else {
+            result += a+'<br>';
+        }
+    }
+    document.write(result)
+</script>
+</html>
